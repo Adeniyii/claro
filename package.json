@@ -6,7 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "push": "drizzle-kit push:pg",
+    "pull": "drizzle-kit introspect:pg ",
+    "generate": "drizzle-kit generate:pg",
+    "drop": "drizzle-kit drop",
+    "check": "drizzle-kit check:pg",
+    "up": "drizzle-kit up:pg",
+    "migrate": "bun run src/lib/supabase/migration.ts"
   },
   "dependencies": {
     "dotenv": "^16.3.1",
@@ -15,7 +22,8 @@
     "next": "14.0.4",
     "postgres": "^3.4.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "winston": "^3.11.0"
   },
   "devDependencies": {
     "@types/node": "^20",
