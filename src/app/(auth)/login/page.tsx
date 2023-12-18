@@ -17,6 +17,7 @@ import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Loader from "@/components/loader";
+import {loginAction} from "@/app/server-action/auth-actions";
 
 const LoginPage = () => {
   const router = useRouter();
@@ -33,6 +34,11 @@ const LoginPage = () => {
   const onSubmit: SubmitHandler<z.infer<typeof FormSchema>> = async (
     formData,
   ) => {
+    const {error} = await loginAction(formData)
+    if (error) {
+      setSubmitError(error.message)
+      return
+    }
     router.replace("/dashboard");
   };
 
