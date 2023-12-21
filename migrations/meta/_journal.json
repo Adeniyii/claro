@@ -15,6 +15,13 @@
       "when": 1702817674877,
       "tag": "0001_mysterious_glorian",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1703025049483,
+      "tag": "0002_dizzy_imperial_guard",
+      "breakpoints": true
     }
   ]
 }
