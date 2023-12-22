@@ -16,7 +16,7 @@ import {
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import Loader from "@/components/loader";
+import Loader from "@/components/ui/loader";
 import {loginAction} from "@/app/server-action/auth-actions";
 
 const LoginPage = () => {

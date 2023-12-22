@@ -18,7 +18,7 @@ import {
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import Loader from "@/components/loader";
+import Loader from "@/components/ui/loader";
 import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
 import {MailCheck} from "lucide-react";
 import {signupAction} from "@/app/server-action/auth-actions";

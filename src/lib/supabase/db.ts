@@ -27,6 +27,6 @@ const migrateDB = async () => {
         process.exit(1);
     }
 }
-void migrateDB();
+// void migrateDB();
 
 export default db;

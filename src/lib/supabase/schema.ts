@@ -11,6 +11,10 @@ export const workspaces = pgTable("workspaces", {
     title: varchar("title", {length: 255}).notNull(),
     data: text("data"),
     workspaceOwner: uuid("workspace_owner").notNull(),
+    iconId: text('icon_id').notNull(),
+    inTrash: text('in_trash'),
+    logo: text('logo'),
+    bannerUrl: text('banner_url'),
 })
 
 export const folders = pgTable("folders", {
@@ -21,6 +25,10 @@ export const folders = pgTable("folders", {
     }).notNull(),
     title: varchar("title", {length: 255}).notNull(),
     data: text("data"),
+    iconId: text('icon_id').notNull(),
+    inTrash: text('in_trash'),
+    logo: text('logo'),
+    bannerUrl: text('banner_url'),
     workspaceId: uuid("workspace_id").references(() => workspaces.id, {
         onDelete: "cascade"
     }).notNull(),
@@ -34,6 +42,10 @@ export const files = pgTable("files", {
     }).notNull(),
     title: varchar("title", {length: 255}).notNull(),
     data: text("data"),
+    iconId: text('icon_id').notNull(),
+    inTrash: text('in_trash'),
+    logo: text('logo'),
+    bannerUrl: text('banner_url'),
     folderId: uuid("folder_id").references(() => folders.id, {
         onDelete: "cascade"
     }).notNull(),
