@@ -73,7 +73,7 @@ const SignupPage = () => {
       >
         <Link
           href="/"
-          className=" w-full flex justify-left items-center"
+          className="w-full flex justify-left items-center"
         >
           <span
             className="font-semibold dark:text-white text-4xl first-letter:ml-2"

@@ -10,6 +10,7 @@ export const workspaces = pgTable("workspaces", {
     }).notNull(),
     title: varchar("title", {length: 255}).notNull(),
     data: text("data"),
+    workspaceOwner: uuid("workspace_owner").notNull(),
 })
 
 export const folders = pgTable("folders", {
